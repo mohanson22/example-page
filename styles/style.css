@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
+:root {
+    --background-color: #f3ec81;
+    --text-color: #483D3F;
+    --highlight-color-one: #90a6e8;
+    --highlight-color-two: #EF6351;
+    --highlight-color-three: #EDDDD4;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.carousel-inner img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.btn {
+    background: var(--text-color);
+    border: none;
+    color: var(--green-hightlight);
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 112px;
+}
+
+div.card {
+    border: none;
+    background-color: transparent;
+}
+
+div.card {
+    border: none;
+    background-color: transparent;
+}
+
+div.card-body, .card-title, .card-text {
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('../images/image.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.bg-light {
+    background-color: red;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    font-family: "Chango", system-ui;
+}
+
+h2, h3, h4, h5 {
+    font-family: "Rubik Burned", system-ui;
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+}
+
+.work-card img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.work-card {
+    font-family: "Rock 3D", system-ui;
+    border-radius: 0px;
+    border: none;
+}
+
+.btn {
+    background-color: var(--highlight-color-two);
+    border: none;
+}
+
+
+h2 {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.modal-body img {
+    width: 100%;
+}
