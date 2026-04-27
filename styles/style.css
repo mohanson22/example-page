@@ -2,104 +2,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
 
-:root {
-    --background-color: #f3ec81;
-    --text-color: #483D3F;
-    --highlight-color-one: #90a6e8;
-    --highlight-color-two: #EF6351;
-    --highlight-color-three: #EDDDD4;
+/* RESET */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Bowlby One", sans-serif";
+
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-.carousel-inner img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-}
-
-.btn {
-    background: var(--text-color);
-    border: none;
-    color: var(--green-hightlight);
-    font-family: "Roboto";
-    font-weight: 900;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 112px;
-}
-
-div.card {
-    border: none;
-    background-color: transparent;
-}
-
-div.card {
-    border: none;
-    background-color: transparent;
-}
-
-div.card-body, .card-title, .card-text {
-    color: var(--text-color);
-}
-
-/* Hero Section */
-.hero-section {
-    background: url('../images/image.png');
-    background-size: cover;
-    background-position: 50% 50%;
+/* HERO BACKGROUND */
+.hero {
+  position: relative;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: url('../images/grad\ pic.jpg') center/cover no-repeat;
+}
+
+/* DARK LEFT SIDE */
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 10;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+}
+
+/* STRIPED RIGHT SIDE */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+
+    background:
+    /* STRIPES (top layer) */
+        repeating-linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.15) 18px,
+            rgba(255, 255, 255, 0.05) 18px,
+            rgba(255, 255, 255, 0.05) 36px
+        ),
+
+        /* DARK BLUE BASE (underneath) */
+        rgba(20, 40, 70, 0.6);
+}
+
+/* TEXT */
+.name {
+    position: absolute;
     color: white;
+    z-index: 2;
+    font-family: "chango", sans-serif;
 }
 
-.bg-light {
-    background-color: red;
+.first {
+    top: 35%;
+    left: 9%;
+    font-size: 100px;
 }
 
-.hero-section h1 {
-    font-weight: 700;
-    font-family: "Chango", system-ui;
+.last {
+    top: 50%;
+    right: 9%;
+    font-size: 100px;
 }
 
-h2, h3, h4, h5 {
-    font-family: "Rubik Burned", system-ui;
+.initials {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    letter-spacing: 5px;
+    z-index: 2;
+    font-size: 20px;
 }
 
-.hero-section .lead {
-    font-size: 1.5rem;
-}
-
-.work-card img {
-    height: 300px;
-    object-fit: cover;
-    border-radius: 0;
-}
-
-.work-card {
-    font-family: "Rock 3D", system-ui;
-    border-radius: 0px;
-    border: none;
-}
-
-.btn {
-    background-color: var(--highlight-color-two);
-    border: none;
-}
-
-
-h2 {
-    font-weight: 700;
-    color: var(--text-color);
-}
-
-.modal-body img {
+/* NAV BUTTONS */
+.nav {
+    position: absolute;
+    bottom: 80px;
     width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.nav a {
+    display: inline-block;
+    margin: 25px;
+    padding: 12px 30px;
+    background: #9c5a6b;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #e6c5cc;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.nav a:hover {
+    background: #7e4554;
 }
